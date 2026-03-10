@@ -29,5 +29,12 @@ pipeline {
         sh './script.sh'
       }
     }
+    stage('Run Python3 Script') {
+      steps {
+        sh 'chmod +x python.py'
+        sh 'python3 --version'   // optional check
+        sh 'python3 python.py'   // runs your python file
+      }
+    }
   }
 }
